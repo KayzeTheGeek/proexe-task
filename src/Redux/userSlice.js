@@ -41,7 +41,7 @@ const usersSlice = createSlice({
       console.log("myagaggaValue", action.payload);
 
       state.usersList.push({
-        id: highestID + 1,
+        id: state.usersList.length === 0 ? 1 : ++highestID,
         ...action.payload,
         city: "NYC",
         username: name
