@@ -28,7 +28,7 @@ const usersSlice = createSlice({
       });
     },
     addUser(state, action) {
-      const { name} = action.payload;
+      const { name } = action.payload;
 
       function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
@@ -38,11 +38,11 @@ const usersSlice = createSlice({
         return Math.max(tot, value.id);
       }, -1);
 
-      console.log("myagaggaValue",action.payload);
+      console.log("myagaggaValue", action.payload);
 
       state.usersList.push({
-        id: ++highestID,
-       ...action.payload,
+        id: highestID + 1,
+        ...action.payload,
         city: "NYC",
         username: name
           .split(" ")
