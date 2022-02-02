@@ -59,6 +59,7 @@ export default function AlertDialogSlide({ id }) {
               color: "white",
               textTransform: "none",
             }}
+            onClick={()=>setOpen(false)}
           >
             Cancel
           </Button>
